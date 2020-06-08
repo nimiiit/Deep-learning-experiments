@@ -1,34 +1,25 @@
-# Basic-Image-Processing
-Some basic image processing topics 
+# Deep learning Experiments
+I will cover few deep learning topics here and I will share my observations on each of these topics. The topics I intend to cover is specified here though it is not complete. 
 
 ## Topics covered
-  ### Image Warping : 
-Write a program from scratch for image warping (translation, rotation and scaling). We use the target to source mapping concept and bilinear interpolation.
-     
-   **Target to Source Mapping explained:**
-   Given a transformation from source to target (say translation or rotation) it is always the practise to do target to source mapping to avoid empty spaces in the warped image.
-   
-   **How is it done?**   
- - Define a target of same size as image.         
-  - Take the index from target and inverse warp these points and see where they fall in the source image.    
-  - If the mapped index falls on integer location, we can directly plug in the value to source image to the Target image.   
-  - If the mapped index falls on a fraction (where pixel values are not defined) in the source, we use an interpolation method to get the value.    
-  - Here we use bilinear interpolation.  
-    
-   **Target to source mapping with bilinear interpolation explained with diagram**
-      <p align="center">
-      <img src="https://github.com/nimiiit/Basic-Image-Processing/blob/master/Image_warping/TargetToSourceMap.png" alt="Target to Source Mapping"  width="500" height="250">
-      </p>  
-      
-**Results**
-   
- Input Image :  
-    <img width="131" alt="Capture1" src="https://user-images.githubusercontent.com/9528369/82805310-6df64200-9ea1-11ea-96b4-c006f3379efe.PNG"> 
-    
-    
- Transformed Image (After rotation and scaling): 
+  ### Classification : 
+  A basic binary classifier for cat-dog classification using a Convolutional Classifier is learned here. Then we experiment with the label smoothing concept introduced for model calibration and improved accuracy.  
+  
+  ### Autoencoders :
+  A basic Multi-layer perceptron (MLP) based autoencoder is designed for MNIST dataset. We then check the effect of bottleneck layer on the reconstruction. A visualization of the data in pixel space as well as in encoded latent space with TSNE is provided. Then we move on to playing around with linear interpolation in the latent space and image space.
+  
+ ### Types of Autoencoders (coming soon) : 
+I intend to cover contrastive AE and Variational AE to give a first step ino generative networks
  
-   <img width="133" alt="Capture" src="https://user-images.githubusercontent.com/9528369/82805313-6f276f00-9ea1-11ea-9544-edbe7abee311.PNG">
+ ### GANs (coming soon) : 
+ * DCGAN for face generation (with  Latent space vector arithmetics)
+ * Pix2Pix/cycleGAN
+ * Impact of GAN in restoration framework (A simple SR/ denoising/ image inpainting )
+ * My own deblurring paper (http://openaccess.thecvf.com/content_ECCV_2018/papers/Nimisha_T_M_Unsupervised_Class-Specific_Deblurring_ECCV_2018_paper.pdf)
+ 
+ Hope to cover few of these ASAP    
+   
+
 
  
      
